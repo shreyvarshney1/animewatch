@@ -1,18 +1,20 @@
 html 
     head 
         title Anime To Watch
+            - var previousid = parseInt(id) - 1
+            - var nextid = parseInt(id) + 1
     body
         h1 Watchlist: 
         h2 #{id}. #{AnimeName} 
         h3 
             center
-                a(href="#{Link}", target="_blank") 9Anime 
+                fixed: a(href=Link) 9Anime
         br 
         hr
         h3 
             center
-                a(href="/api/anime/#{nextid}") Next➡️
+                a(href="/api/anime/" + nextid) Next➡️
         hr
         h3 
             center
-                a(href="/api/anime/#{previousid}") Previous⬅️
+                a(href="/api/anime/" + previousid) Previous⬅️
